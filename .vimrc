@@ -1,3 +1,26 @@
+"colorscheme solarized         " awesome colorscheme
+syntax enable           " enable syntax processing
+set tabstop=4       " number of visual spaces per TAB
+set expandtab       " tabs are spaces
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+" turn off search highlight
+"nnoremap <leader><space> :nohlsearch<CR>
+
+execute pathogen#infect()
+filetype plugin indent on
+
+map <C-n> :NERDTreeToggle<CR>
+
+au FileType cucumber setl sw=2 sts=2 et
+
 ":set list shows invisible chars, :set nolist hides them, :set list! toggles between shown them and hiding them. This mapping toggles invisible chars by typing \l
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
