@@ -37,3 +37,4 @@ endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+nnoremap <F5> :GundoToggle<CR>
