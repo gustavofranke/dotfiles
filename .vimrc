@@ -1,3 +1,4 @@
+set background=dark
 "colorscheme solarized         " awesome colorscheme
 syntax enable           " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
@@ -21,7 +22,18 @@ map <C-n> :NERDTreeToggle<CR>
 
 au FileType cucumber setl sw=2 sts=2 et
 
-":set list shows invisible chars, :set nolist hides them, :set list! toggles between shown them and hiding them. This mapping toggles invisible chars by typing \l
+" `:set list` shows invisible chars, `:set nolist` hides them, `:set list!` toggles between shown them and hiding them. This mapping toggles invisible chars by typing `\l`
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+" Pressing `,v` opens the vimrc file in a new tab.
+"let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
