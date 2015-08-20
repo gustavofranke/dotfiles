@@ -33,8 +33,20 @@ if has("autocmd")
 endif
 
 " Pressing `,v` opens the vimrc file in a new tab.
-"let mapleader = ","
+let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" Pressing `,i` opens the vimrc file in a new tab.
+let mapleader = ","
+nmap <leader>i :vsp $MYVIMRC<CR>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 nnoremap <F5> :GundoToggle<CR>
+
+autocmd FileType groovy setlocal commentstring=//\ %s
+
+" Changing focus between windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
