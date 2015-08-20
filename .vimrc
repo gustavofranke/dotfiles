@@ -41,8 +41,11 @@ let mapleader = ","
 nmap <leader>i :vsp $MYVIMRC<CR>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" gundo plugin related
 nnoremap <F5> :GundoToggle<CR>
 
+" commentary plugin related
 autocmd FileType groovy setlocal commentstring=//\ %s
 
 " Changing focus between windows
