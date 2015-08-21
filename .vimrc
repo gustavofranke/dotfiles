@@ -1,6 +1,11 @@
+set nocompatible
+filetype plugin on
+
+" awesome colorscheme, enable syntax processing
+syntax enable
 set background=dark
-"colorscheme solarized         " awesome colorscheme
-syntax enable           " enable syntax processing
+colorscheme solarized
+
 set tabstop=4       " number of visual spaces per TAB
 set expandtab       " tabs are spaces
 set number              " show line numbers
@@ -9,6 +14,7 @@ set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
+
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
