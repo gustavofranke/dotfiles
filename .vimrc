@@ -1,6 +1,9 @@
 set nocompatible
 filetype plugin on
 
+execute pathogen#infect()
+filetype plugin indent on
+
 " awesome colorscheme, enable syntax processing
 syntax enable
 set background=dark
@@ -20,9 +23,6 @@ set hlsearch            " highlight matches
 
 " turn off search highlight
 "nnoremap <leader><space> :nohlsearch<CR>
-
-execute pathogen#infect()
-filetype plugin indent on
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -61,3 +61,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 set history=200
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
