@@ -9,8 +9,8 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set tabstop=4       " number of visual spaces per TAB
-set expandtab       " tabs are spaces
+set tabstop=4           " number of visual spaces per TAB
+set expandtab           " tabs are spaces
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
