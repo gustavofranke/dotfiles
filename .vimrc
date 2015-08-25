@@ -22,7 +22,7 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
 " turn off search highlight
-"nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><space> :nohlsearch<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -46,10 +46,17 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 let mapleader = ","
 nmap <leader>i :vsp $MYVIMRC<CR>
 
+" ctrlp plugin settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|build|bin)$'
+  \ }
 
 " gundo plugin related
 nnoremap <F5> :GundoToggle<CR>
+
+" tagbar plugin related
+nmap <F8> :TagbarToggle<CR>
 
 " commentary plugin related
 autocmd FileType groovy setlocal commentstring=//\ %s
@@ -68,3 +75,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" indent xml
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
