@@ -49,7 +49,8 @@ nmap <leader>i :vsp $MYVIMRC<CR>
 " ctrlp plugin settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|build|bin)$'
+  \ 'dir':  '\v[\/]\.(git|build|bin)$',
+  \ 'file': '\v\.(class)$',
   \ }
 
 " gundo plugin related
