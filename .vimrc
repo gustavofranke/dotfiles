@@ -78,3 +78,6 @@ vmap <C-Down> ]egv
 
 " indent xml
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+" automatically expands to the path of the active buffer when in cmd line mode
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
