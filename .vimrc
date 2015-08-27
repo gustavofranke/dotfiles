@@ -15,8 +15,10 @@ set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
-set lazyredraw          " redraw only when we need to.
+set lazyredraw          " redraw only when we need to
 set showmatch           " highlight matching [{()}]
+
+set hidden              "allow vim to work with multiple files unsaved
 
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -38,11 +40,11 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-" Pressing `,v` opens the vimrc file in a new tab.
+" Pressing `,v` opens the vimrc file in a new tab
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
-" Pressing `,i` opens the vimrc file in a new tab.
+" Pressing `,i` opens the vimrc file in a new tab
 let mapleader = ","
 nmap <leader>i :vsp $MYVIMRC<CR>
 
