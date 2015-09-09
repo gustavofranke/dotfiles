@@ -1,12 +1,15 @@
 set nocompatible
 filetype plugin on
 
+set t_Co=256
+
 execute pathogen#infect()
 filetype plugin indent on
 
 " awesome colorscheme, enable syntax processing
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 set tabstop=4           " number of visual spaces per TAB
