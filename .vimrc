@@ -23,8 +23,6 @@ filetype plugin indent on    " required
 
 set t_Co=256
 
-filetype plugin indent on
-
 " awesome colorscheme, enable syntax processing
 syntax enable
 set background=dark
