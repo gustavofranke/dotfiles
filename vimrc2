@@ -12,7 +12,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -22,12 +21,9 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set t_Co=256
-
 " awesome colorscheme, enable syntax processing
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
 
 set tabstop=4           " number of visual spaces per TAB
@@ -108,3 +104,20 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 " automatically expands to the path of the active buffer when in cmd line mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" syntastic related
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" java.vim related
+:let java_highlight_java_lang_ids=1
+:let java_highlight_functions="style"
+
+" haskell.vim related
+ 
