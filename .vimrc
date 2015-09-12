@@ -21,9 +21,14 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set t_Co=256
+
+filetype plugin indent on
+
 " awesome colorscheme, enable syntax processing
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 set tabstop=4           " number of visual spaces per TAB
