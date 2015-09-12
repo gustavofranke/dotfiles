@@ -1,8 +1,25 @@
 set nocompatible
-filetype plugin on
+filetype plugin off
 
-execute pathogen#infect()
-filetype plugin indent on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+
+"All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " awesome colorscheme, enable syntax processing
 syntax enable
@@ -23,6 +40,8 @@ set hidden              "allow vim to work with multiple files unsaved
 
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+
+set wildignore+=*/tmp/*,*/bin/*,*.so,*.swp,*.zip
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
