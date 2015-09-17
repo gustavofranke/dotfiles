@@ -91,6 +91,9 @@ nmap <F8> :TagbarToggle<CR>
 " commentary plugin related
 autocmd FileType groovy setlocal commentstring=//\ %s
 
+" so that I can resize windows with the mouse
+set mouse=n
+
 " Changing focus between windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
